@@ -1,4 +1,4 @@
-<p>Hello, this is a site for portfolio demonstration. </p>
+<p>Hello, I have just started to build this portfolio page for demonstration. </p>
 <p>Glad to see you here, you can also find me with the following links: </p>
 
 <ul>
