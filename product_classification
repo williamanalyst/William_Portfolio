@@ -72,12 +72,19 @@
 #
 #
 ##########################################################################################################
-#
+# To do list:
 ##########################################################################################################
 #
-
-
-
+# Finish the data pipeline for daily price upload/ update
+#
+# Clean up the high margin products/ products with negative margin whereas not dynamic
+#
+# Classification of products
+    # Willingness to pay
+    # products with high/ mid/ low value
+#
+# Pricing by different industry (value is expected to be different across industries)
+# 
 
 
 
