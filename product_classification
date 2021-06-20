@@ -8,7 +8,11 @@
             # If Web_Id exist that further classify the product, use Web_ID as the next level as well.
     # Question: how to we identify that 2 or more products actually does the same job?
         # e.g. having the same UNSPSC
-    # e.g. For the products that serve the same purpose, they should be classified into premium/ intermediate/ cheaper category, which helps pricing.
+    # Question: how do we measure the accuracy of the classification?
+        # Answer: 
+    # e.g. For the products that serve the same purpose, they should be classified into premium/ intermediate/ cheaper levels, which helps pricing.
+        # e.g. when a new product is available, if it is identical to other products, of couse it should have the same price.
+        # e.g. however, when it is different from exisitng products, we need to evaluate its relative status.
         # 
     # Question: How do we identify the value of a product?
         # Answer: products that fall into the same group (PD-PG-SG-UNSPSC) should have the same exposure, unless certain promo applies.
