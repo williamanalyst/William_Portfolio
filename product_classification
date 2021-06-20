@@ -1,13 +1,50 @@
 # 
 ##########################################################################################################
-#
+# Product Classification:
 ##########################################################################################################
-#
+# Option 1: By Function (products that serve the same purpose)
+    # Using PD --> PG --> SG --> UNSPSC --> Web ID
+        # As UNSPSC provides a reliable estimation of that product.
+            # If Web_Id exist that further classify the product, use Web_ID as the next level as well.
+    # Question: how to we identify that 2 or more products actually does the same job?
+        # e.g. having the same UNSPSC
+    # e.g. For the products that serve the same purpose, they should be classified into premium/ intermediate/ cheaper category, which helps pricing.
+        # 
+    # Question: How do we identify the value of a product?
+        # Answer: products that fall into the same group (PD-PG-SG-UNSPSC) should have the same exposure, unless certain promo applies.
+            # Therefore, the different sales of the products identify different conversion rates.
+            # 
+# Option 2: 
     # 
+        # 
+        # 
+# 
+##########################################################################################################
+# Price By Value: 
+##########################################################################################################
+# The core concept of "Price by Value" is:
+    # Option 1: If the price could be tailored by person, then estimate the customer's willingness to pay, and offer that price.
+        # e.g. classify the customers by their features, and offer different pricce
+            # e.g. if the conersion rate is low, use re-marketing, and lower the price if needed
+    # Option 2: if the price could not be user-specific, then offer a price that is close to most (typical) customer's willingness to pay.
+        # e.g. 
+
+# Same product should have different value (and price) for customers from different industry.
 
 
 
+# Profit Optimization:
+    # Option 1: Price Elasticity of Demand
+        # e.g. Lower Margin, much higher sales volume; or Higher Margin, slightly lower sales volume
+    # Option 2: Change Composition of Customer Goods Basket
+        # e.g. Substitute current goods basket with higher margin products (esp. products that cannot be easily substituted)
+#
+#
 
+##########################################################################################################
+# Estimate the Demand Function: 
+##########################################################################################################
+# Demand = Sum(Sales_below_threshold) --> not reliable, esp when big customers play the key role in the transaction
 
 
 
