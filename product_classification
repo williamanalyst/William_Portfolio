@@ -6,7 +6,7 @@
     # Using PD --> PG --> SG --> UNSPSC --> Web ID
         # As UNSPSC provides a reliable estimation of that product.
             # If Web_Id exist that further classify the product, use Web_ID as the next level as well.
-    # Question: how to we identify that 2 or more products actually does the same job?
+    # Question: how to identify that 2 or more products actually does the same job?
         # e.g. having the same UNSPSC
     # Question: how do we measure the accuracy of the classification?
         # Answer: 
