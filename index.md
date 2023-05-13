@@ -4,3 +4,5 @@
 <ul>
   <li> <a href = "https://www.linkedin.com/in/williamzmx/"> Linkedin </a></li>
 </ul>
+
+<p>Glad to see you here, you can also find me with the following links: </p>
