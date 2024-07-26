@@ -1,10 +1,8 @@
-
+<!DOCTYPE HTML>
 <!--
 	Story by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-
- Modified by William Xie for personal use only on 2024-07-26
 -->
 <html>
 	<head>
@@ -22,8 +20,8 @@
 				<!-- One -->
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
-							<h1>This is a brief demo to the portfolio that William has built: </h1>
-							<p class="major">A (modular, highly tweakable) responsive one-page template designed by <a href="https://html5up.net">HTML5 UP</a> and released for free under the <a href="https://html5up.net/license">Creative Commons</a>.</p>
+							<h1>Portfilio Demo for William Xie: </h1>
+							<p class="major">William has done much Data Science work in <a href="https://html5up.net">Web Scraping</a>, Computer Vision, <a href="https://html5up.net/license">Natural Language Processing</a>, etc.</p>
 							<ul class="actions stacked">
 								<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
 							</ul>
@@ -36,8 +34,8 @@
 				<!-- Two -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
-							<h2>Magna etiam feugiat</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<h2>Web Scraping</h2>
+							<p>When we are handling some real-world problems with the internal dataset, sometimes it does not give us a commprehensive view of the story. Therefore, we might need to seek for high quality, external dataset to support our decision making process.</p>
 							<ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
 							</ul>
