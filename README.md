@@ -48,8 +48,8 @@
 				<!-- Three -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>Tempus adipiscing</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<h2>Natural Language Processing</h2>
+							<p>With the help of NLP techniques, we can research into contents that customers are interested in and classify products in the right clusters.</p>
 							<ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
 							</ul>
