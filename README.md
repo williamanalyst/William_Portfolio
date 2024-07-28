@@ -27,7 +27,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 						</ul>
 					</div>
 					<div class="image">
-						<img src="images/banner.jpg" alt="" />
+						<img src="[images/banner](https://github.com/williamanalyst/William_Portfolio/blob/master/William_Logo.png" alt="" />
 					</div>
 				</section>
 
@@ -84,7 +84,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 						<div class="gallery style2 medium lightbox onscroll-fade-in">
 							<article>
 								<a href="images/gallery/fulls/01.jpg" class="image">
-									<img src="images/gallery/thumbs/01.jpg" alt="" />
+									<img src="https://github.com/williamanalyst/William_Portfolio/blob/master/William_Logo.png" alt="" />
 								</a>
 								<div class="caption">
 									<h3>Ipsum Dolor</h3>
