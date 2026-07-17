@@ -3,20 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && node scripts/prepare-sites.mjs",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "vinext dev",
+    "build": "vinext build",
+    "start": "vinext start"
   },
   "dependencies": {
-    "next": "14.2.5",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
   },
   "devDependencies": {
-    "@types/node": "20.14.12",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
-    "typescript": "5.5.4"
-  }
+    "@cloudflare/vite-plugin": "1.37.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "@vitejs/plugin-rsc": "0.5.26",
+    "react-server-dom-webpack": "19.2.6",
+    "typescript": "5.9.3",
+    "vinext": "0.0.50",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  },
+  "type": "module"
 }
