@@ -16,6 +16,7 @@ export default function Home() {
 
       <main id="top">
         <section className="hero">
+          <div className="shoreline" aria-hidden="true"><span /></div>
           <div className="hero-copy">
             <p className="eyebrow">{site.hero.eyebrow}</p>
             <h1>Data that moves<br/><em>business forward.</em></h1>
