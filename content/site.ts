@@ -17,7 +17,7 @@ export const site = {
     { value: "3%+", label: "profit uplift delivered" },
     { value: "$500M+", label: "annual portfolio influenced" },
     { value: "50%+", label: "effort saved in selected workflows" },
-    { value: "20+", label: "cross-functional projects delivered" }
+    { value: "40+", label: "cross-functional projects delivered" }
   ],
   projects: [
     {
