@@ -4,6 +4,7 @@ import { sites } from "./build/sites-vite-plugin";
 
 export default defineConfig(async () => {
   process.env.WRANGLER_WRITE_LOGS ??= "false";
+  process.env.MINIFLARE_REGISTRY_PATH ??= ".wrangler/registry";
   const { cloudflare } = await import("@cloudflare/vite-plugin");
   return {
     plugins: [
@@ -11,7 +12,7 @@ export default defineConfig(async () => {
       sites(),
       cloudflare({
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
-        config: { main: "./worker/index.ts", compatibility_flags: ["nodejs_compat"] }
+        config: { main: "./worker/index.ts" }
       })
     ]
   };

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { site } from "../content/site";
+import { readContent } from "../content/store";
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  const { published: site } = await readContent();
+  return {
   metadataBase: new URL(site.siteUrl),
   title: { default: site.seo.title, template: `%s | ${site.name}` },
   description: site.seo.description,
@@ -20,9 +22,11 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image", title: site.seo.title, description: site.seo.description, images: ["/og.png"] },
   robots: { index: true, follow: true }
-};
+  };
+}
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const { published: site } = await readContent();
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -34,5 +38,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     knowsAbout: ["Data analytics", "Artificial intelligence", "Machine learning", "Pricing analytics", "Data engineering", "Automation"]
   };
 
-  return <html lang="en"><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}/></body></html>;
+  return <html lang="en"><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}/></body></html>;
 }

@@ -9,10 +9,50 @@ export const site = {
       "Portfolio of William Xie, a Sydney-based data analytics and AI leader delivering pricing, automation, machine learning and decision products with measurable commercial impact."
   },
   hero: {
+    title: "Data that moves",
+    titleEmphasis: "business forward.",
+    resumeLabel: "Download résumé ↓",
     eyebrow: "Data Analytics & AI Leader · Sydney",
     description:
       "I turn ambiguous commercial questions into decision-ready analytics, scalable automation and applied AI—combining hands-on technical delivery with the stakeholder leadership to make solutions stick."
   },
+  profile: {
+    label: "PROFILE / 2026",
+    headline: "Highly technical.",
+    headlineSecondLine: "Commercially focused.",
+    location: "Sydney, Australia",
+    focus: "Analytics & AI leadership"
+  },
+  statement: {
+    eyebrow: "What I bring",
+    start: "I turn complex evidence into",
+    emphasis: "clear commercial value",
+    end: "—then build the systems that make it repeatable."
+  },
+  work: {
+    eyebrow: "Selected analytics & AI portfolio",
+    title: "From problem",
+    titleSecondLine: "to practical value.",
+    description: "Four concrete case studies grounded in the July 30 résumé: the business question, the delivery approach, and the value created."
+  },
+  expertise: {
+    eyebrow: "End-to-end capability",
+    title: "From raw signal",
+    titleSecondLine: "to confident action.",
+    description: "Hands-on across the full data lifecycle, with the commercial judgement and stakeholder skill to connect technical work to what matters."
+  },
+  aboutHeading: {
+    eyebrow: "About William",
+    title: "Analytical rigour.",
+    titleEmphasis: "Human clarity.",
+    quote: "“Clarify the decision. Build the evidence. Make the value usable.”"
+  },
+  contact: {
+    eyebrow: "Let’s build something useful",
+    title: "Looking for a data leader who can connect models, systems and commercial outcomes?",
+    linkLabel: "Connect on LinkedIn ↗"
+  },
+  footer: "Data Analytics · AI · Automation",
   metrics: [
     { value: "3%+", label: "profit uplift delivered" },
     { value: "$500M+", label: "annual portfolio influenced" },
