@@ -1,6 +1,6 @@
 import { editorAccess } from "../../chatgpt-auth";
 import { readContent, saveContent } from "../../../content/store";
-import { validateContent } from "../../../content/validation";
+import { normalizeContent } from "../../../content/validation";
 
 export const dynamic = "force-dynamic";
 const json = (body: unknown, status = 200) => Response.json(body, { status, headers: { "Cache-Control": "no-store" } });
@@ -35,7 +35,7 @@ export async function PUT(request: Request) {
     for (const chunk of chunks) { bytes.set(chunk, offset); offset += chunk.length; }
     payload = JSON.parse(new TextDecoder().decode(bytes));
     if (!payload || !Number.isSafeInteger(payload.revision) || payload.revision < 0 || !["draft", "publish"].includes(payload.action)) throw new Error("Invalid save request.");
-    validateContent(payload.content);
+    payload.content = normalizeContent(payload.content);
   } catch (error) { return json({ error: error instanceof Error ? error.message : "Invalid content." }, 400); }
   try {
     if (!await saveContent(payload.content, payload.revision, payload.action === "publish")) return json({ error: "Content changed in another session. Copy your edits before reloading to avoid overwriting newer work." }, 409);

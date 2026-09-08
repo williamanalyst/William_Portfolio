@@ -13,9 +13,11 @@ Once this version is deployed to Sites:
 3. Choose **Preview** to review the current draft. **Save draft** stores it without changing the public website.
 4. Choose **Publish content** and confirm to make the changes visible immediately. No GitHub commit or redeployment is needed for content edits.
 
+The **LinkedIn profile URL** field controls the navigation and contact buttons. Résumé download fields have been removed.
+
 Only the configured owner may read drafts or save changes. Visitors can continue reading the portfolio without signing in. A conflicting save from another session is rejected rather than overwriting newer work; copy your unsaved edits before reloading if that happens.
 
-Image and résumé fields accept existing paths (such as `/images/project_agentic_analytics.png`) or full HTTPS URLs. Upload new assets through your existing file hosting, or add them to `public/` and deploy the code. File uploads are not included in this editor.
+Image fields accept existing paths (such as `/images/project_agentic_analytics.png`) or full HTTPS URLs. Upload new assets through your existing file hosting, or add them to `public/` and deploy the code. File uploads are not included in this editor.
 
 Published content and drafts live in the Sites D1 database, not in GitHub. `content/site.ts` supplies the initial content only; editing that file does not overwrite content already saved in the database. Keep the D1 database when deploying updates. The archived prototype, `standalone.html`, is independent of the editor.
 

@@ -10,7 +10,7 @@ export default function Portfolio({ site }: { site: SiteContent }) {
           <a href="#work">Case studies</a>
           <a href="#expertise">Expertise</a>
           <a href="#about">About</a>
-          <a className="nav-resume" href={site.resume} download>Download résumé ↓</a>
+          <a className="nav-linkedin" href={site.linkedin} target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
         </nav>
       </header>
 
@@ -22,8 +22,7 @@ export default function Portfolio({ site }: { site: SiteContent }) {
             <h1>{site.hero.title}<br/><em>{site.hero.titleEmphasis}</em></h1>
             <p className="lead">{site.hero.description}</p>
             <div className="actions">
-              <a className="button" href={site.resume} download>{site.hero.resumeLabel}</a>
-              <a className="text-link" href="#work">Explore the case studies ↓</a>
+              <a className="button" href="#work">Explore the case studies ↓</a>
             </div>
           </div>
           <aside className="hero-panel" aria-label="Professional profile summary">
@@ -88,7 +87,6 @@ export default function Portfolio({ site }: { site: SiteContent }) {
           <h2>{site.contact.title}</h2>
           <div className="actions">
             <a className="button light" href={site.linkedin} target="_blank" rel="noreferrer">{site.contact.linkLabel}</a>
-            <a className="text-link light-link" href={site.resume} download>Download résumé ↓</a>
           </div>
         </section>
       </main>

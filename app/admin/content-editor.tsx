@@ -6,7 +6,7 @@ import { site } from "../../content/site";
 import { validateContent, type SiteContent } from "../../content/validation";
 import Portfolio from "../portfolio";
 
-const label = (key: string) => ({ seo: "Search & sharing", hero: "Hero", metrics: "Impact metrics", projects: "Case studies", aboutHeading: "About heading", work: "Case study heading", expertise: "Expertise heading", siteUrl: "Website address", resume: "Résumé link", alt: "Image description", eyebrow: "Section label", titleEmphasis: "Emphasised title", titleSecondLine: "Title, second line" }[key] || key.replace(/([A-Z])/g, " $1").replace(/^./, char => char.toUpperCase()));
+const label = (key: string) => ({ seo: "Search & sharing", hero: "Hero", metrics: "Impact metrics", projects: "Case studies", aboutHeading: "About heading", work: "Case study heading", expertise: "Expertise heading", siteUrl: "Website address", linkedin: "LinkedIn profile URL", alt: "Image description", eyebrow: "Section label", titleEmphasis: "Emphasised title", titleSecondLine: "Title, second line" }[key] || key.replace(/([A-Z])/g, " $1").replace(/^./, char => char.toUpperCase()));
 
 type Value = string | Value[] | { [key: string]: Value };
 function Fields({ value, template, path, onChange }: { value: Value; template: Value; path: string; onChange: (value: Value) => void }) {
@@ -15,7 +15,7 @@ function Fields({ value, template, path, onChange }: { value: Value; template: V
     {(typeof template === "string" && template.length > 100) || /description|summary|challenge|approach|quote|about\.\d+$/.test(path)
       ? <textarea id={path} value={value} rows={4} maxLength={6000} onChange={event => onChange(event.target.value)} />
       : <input id={path} value={value} maxLength={6000} onChange={event => onChange(event.target.value)} />}
-    {/\.(image|resume)$/.test(path) && <small>Use an existing /images/ path or a full HTTPS link.</small>}
+    {/\.(image)$/.test(path) && <small>Use an existing /images/ path or a full HTTPS link.</small>}
   </label>;
   if (Array.isArray(value)) return <div className="cms-list">
     {value.map((item, index) => <fieldset className="cms-item" key={index}>
@@ -83,10 +83,10 @@ export default function ContentEditor() {
     <div className="cms-notice" aria-live="polite">{message && <p role="status">{message}</p>}{error && <p role="alert">{error}</p>}</div>
     {!content ? <p>{error ? <button onClick={() => void load()}>Retry loading</button> : "Loading your content…"}</p> : <>
       <fieldset className="cms-form" disabled={busy}><legend className="cms-sr-only">Website content</legend>
-        <details open><summary>Identity & links</summary><div className="cms-section">{(["name", "siteUrl", "linkedin", "resume", "footer"] as const).map(key => <Fields key={key} value={content[key]} template={site[key]} path={`content.${key}`} onChange={value => { setMessage(""); setContent({ ...content, [key]: value }); }} />)}</div></details>
-        {Object.entries(content).filter(([key]) => !["name", "siteUrl", "linkedin", "resume", "footer"].includes(key)).map(([key, value]) => <details key={key}><summary>{label(key)}{Array.isArray(value) && <span>{value.length} entries</span>}</summary><div className="cms-section"><Fields value={value as Value} template={site[key as keyof typeof site] as unknown as Value} path={`content.${key}`} onChange={next => { setMessage(""); setContent({ ...content, [key]: next }); }} /></div></details>)}
+        <details open><summary>Identity & links</summary><div className="cms-section">{(["name", "siteUrl", "linkedin", "footer"] as const).map(key => <Fields key={key} value={content[key]} template={site[key]} path={`content.${key}`} onChange={value => { setMessage(""); setContent({ ...content, [key]: value }); }} />)}</div></details>
+        {Object.entries(content).filter(([key]) => !["name", "siteUrl", "linkedin", "footer"].includes(key)).map(([key, value]) => <details key={key}><summary>{label(key)}{Array.isArray(value) && <span>{value.length} entries</span>}</summary><div className="cms-section"><Fields value={value as Value} template={site[key as keyof typeof site] as unknown as Value} path={`content.${key}`} onChange={next => { setMessage(""); setContent({ ...content, [key]: next }); }} /></div></details>)}
       </fieldset>
-      <p className="cms-footnote">{state?.publishedAt ? `Last published: ${new Date(state.publishedAt).toLocaleString()}` : "Your original portfolio stays live until you publish."} Images and résumé files can be linked from existing files or an HTTPS address.</p>
+      <p className="cms-footnote">{state?.publishedAt ? `Last published: ${new Date(state.publishedAt).toLocaleString()}` : "Your original portfolio stays live until you publish."} Your LinkedIn profile URL updates both contact buttons. Images can use existing files or an HTTPS address.</p>
       <dialog className="cms-preview" ref={preview}><div className="cms-preview-bar"><strong>Draft preview</strong><button onClick={() => preview.current?.close()}>Close preview ×</button></div><div onClick={event => { if ((event.target as HTMLElement).closest("a")) event.preventDefault(); }}><Portfolio site={content} /></div></dialog>
     </>}
   </main>;

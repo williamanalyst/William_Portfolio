@@ -2,7 +2,6 @@ export const site = {
   name: "William Xie",
   siteUrl: "https://william-data-portfolio.william-cheers.chatgpt.site",
   linkedin: "https://www.linkedin.com/in/williamzmx/",
-  resume: "/William_Xie_Data_Analytics_AI_Resume.pdf",
   seo: {
     title: "William Xie | Data Analytics & AI Leader",
     description:
@@ -11,7 +10,6 @@ export const site = {
   hero: {
     title: "Data that moves",
     titleEmphasis: "business forward.",
-    resumeLabel: "Download résumé ↓",
     eyebrow: "Data Analytics & AI Leader · Sydney",
     description:
       "I turn ambiguous commercial questions into decision-ready analytics, scalable automation and applied AI—combining hands-on technical delivery with the stakeholder leadership to make solutions stick."

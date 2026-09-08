@@ -22,7 +22,7 @@ assert.equal((await fetch(`${origin}/api/content`, { method: "PUT", headers: { O
 assert.equal((await fetch(`${origin}/api/content`, { headers: { ...owner, "oai-authenticated-user-email": "visitor@example.com" } })).status, 403);
 const original = await read();
 assert.equal((await save(original.draft, original.revision, "draft", { Origin: "https://other.example" })).status, 403);
-assert.equal((await save({ ...original.draft, resume: "javascript:alert(1)" }, original.revision)).status, 400);
+assert.equal((await save({ ...original.draft, linkedin: "javascript:alert(1)" }, original.revision)).status, 400);
 assert.equal((await save({ ...original.draft, name: "x".repeat(210000) }, original.revision)).status, 413);
 assert.equal((await read()).revision, original.revision);
 
