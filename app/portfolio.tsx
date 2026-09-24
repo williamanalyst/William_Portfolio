@@ -1,4 +1,5 @@
 import type { SiteContent } from "../content/validation";
+import ThemeToggle from "./theme-toggle";
 
 export default function Portfolio({ site }: { site: SiteContent }) {
   return (
@@ -11,6 +12,7 @@ export default function Portfolio({ site }: { site: SiteContent }) {
           <a href="#expertise">Expertise</a>
           <a href="#about">About</a>
           <a className="nav-linkedin" href={site.linkedin} target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a>
+          <ThemeToggle />
         </nav>
       </header>
 

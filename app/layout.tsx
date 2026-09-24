@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { readContent } from "../content/store";
+import { themeBootstrap } from "./theme";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { published: site } = await readContent();
@@ -38,5 +39,5 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
     knowsAbout: ["Data analytics", "Artificial intelligence", "Machine learning", "Pricing analytics", "Data engineering", "Automation"]
   };
 
-  return <html lang="en"><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}/></body></html>;
+  return <html lang="en" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: themeBootstrap }}/></head><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}/></body></html>;
 }
